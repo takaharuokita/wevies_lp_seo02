@@ -512,8 +512,8 @@ h4{
   font-size: 1.2em;
 }
 @media screen and (max-width:480px){
-  h3{
-    font-size: 0.5em;
+  h4{
+    font-size: 0.9em;
   }
 }
 /* ++++++++++++++++++++++++++++++ */
@@ -774,6 +774,12 @@ Part.3
    bottom: 3%;
    right:19%;
  }
+ @media screen and (max-width:480px){
+  .poSec01-A{ /*ボタンに定義*/
+    bottom: 3%;
+    right:40%;
+  }
+ }
  .poSec01-B{ /*ボタンに定義*/
   bottom: 3%;
   right:20px;
@@ -788,6 +794,12 @@ Part.3
  .poSec02-A{ /*ボタンに定義*/
   bottom: 3%;
   left:20px;
+}
+@media screen and (max-width:480px){
+  .poSec02-A{ /*ボタンに定義*/
+    bottom: 3%;
+    left:40%;
+  }
 }
 .poSec02-B{ /*ボタンに定義*/
  bottom: 3%;
@@ -1115,6 +1127,11 @@ Part.6
   transition: .4s;
   text-decoration: none;
 }
+@media screen and (max-width:480px){
+  .btn01{
+    font-size: 9px;
+  }
+}
 .btn01:hover{
   color: white;
   background-color: rgba(0,0,0,0.25);
@@ -1132,6 +1149,11 @@ Part.6
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
   transition: .4s;
   text-decoration: none;
+}
+@media screen and (max-width:480px){
+  .btn02{
+    font-size: 9px;
+  }
 }
 .btn02:hover{
   box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
@@ -1339,6 +1361,14 @@ a.cp_btn {
 	background: #f34b21;
 	border:solid 1px #fff;
   overflow: hidden;
+}
+@media screen and (max-width:480px){
+  a.cp_btn {
+    font-size: 18px;
+  left: 0px;
+    margin: auto;
+    width: 85%;
+  }
 }
 a.cp_btn:before {
 	content:"";
