@@ -132,6 +132,32 @@ display:none;
     transform: translateY(0);
   }
 }
+.fadein-A{
+  animation:fadeInA 3.5s linear -1s 1 normal forwards;
+}
+@keyframes fadeInA{
+  0%{
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fadein-B{
+  animation:fadeInB 3.5s linear -1s 1 normal forwards;
+}
+@keyframes fadeInB{
+  0%{
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 /* ++++++++++++++++++++++++++++++ */
 /* ヘッダー */
 /* ++++++++++++++++++++++++++++++ */
@@ -346,7 +372,7 @@ display:none;
 /* ++++++++++++++++++++++++++++++ */
 .footer {
   font-size: 0.75rem;
-  background-color: #1976D2;
+  background-color: burlywood;
   overflow: hidden;
   width: 100%;
   height: 250px;
@@ -389,7 +415,7 @@ display:none;
   color: #00B4F1;
 }
 .footer h3{
-  color: #243484;
+  color: black;
 }
 .footer li{
   width: 150px;
@@ -746,7 +772,7 @@ Part.3
  }
  .poSec01-A{ /*ボタンに定義*/
    bottom: 3%;
-   right:101px;
+   right:19%;
  }
  .poSec01-B{ /*ボタンに定義*/
   bottom: 3%;
@@ -765,7 +791,7 @@ Part.3
 }
 .poSec02-B{ /*ボタンに定義*/
  bottom: 3%;
- left:100px;
+ left:6%;
 }
 /* ++++++++++++++++++++++++++++++ */
 /* セクション3＿配置定義 */
@@ -1236,77 +1262,96 @@ Part.6
   display: block;
 }
 
-
-/* 間の遊び要素一覧 */
-div.foo{
-  width: 90%;
-  margin: 0 auto;
-  text-align: center;
-}
-.letter{
-  display: inline-block;
-  font-weight: 900;
-  font-size: 8em;
-  margin: 0.2em;
-  position: relative;
-  color: #00B4F1;
-  transform-style: preserve-3d;
-  perspective: 400;
-  z-index: 1;
+#openModal {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform:translate(-50%,-50%);
 }
 @media screen and (max-width:480px){
-  .letter{
-    font-size: 3em;
+  #openModal {
+    position: absolute;
+    left: 50%;
+    transform:translate(-50%,-50%);
   }
 }
-@media screen and (min-width:768px) and ( max-width:1024px){
-  .letter{
-    font-size: 6em;
+button{
+  display: block;
+position: relative;
+width: 590px;
+padding: 0.4em 0.9em 0.8em;
+margin: 15px auto 0px;
+background-image: linear-gradient(45deg, #e28a0f 0%, #ec3f3f 100%);
+box-shadow: inset 0px -8px 2px 7px rgba(0, 0, 0, 0.29);
+border-radius: 45px;
+font-weight: bold;
+font-size: 37px;
+color: #fff;
+text-align: center;
+text-decoration: none;
+overflow: hidden;
+transition: all 0.2s ease;
+}
+
+button:hover {
+  background-image: linear-gradient(45deg, #e7c594 0%, #f18181 100%);
+}
+
+@media screen and (max-width:480px){
+  button {
+    font-size: 22px;
+    width: 310px;
+    display: inline-block;
+    padding: 0.6em 0em 0.9em;
+    margin-top: 20px;
+    text-decoration: none;
+    border-radius: 25px;
+    color: #ffffff;
+    background-image: linear-gradient(45deg, #ec971f 0%, #f04e4e 100%);
+    box-shadow: inset 0px -8px 2px 7px rgba(0, 0, 0, 0.29);
+    border-bottom: solid 3px #c58668;
   }
 }
-.letter:before, .letter:after{
-  position:absolute;
-  content: attr(data-letter);
-  transform-origin: top left;
-  top:0;
-  left:0;
+  button::before {
+  position: absolute;
+  content: '';
+  display: inline-block;
+  top: -180px;
+  left: 0;
+  width: 30px;
+  height: 100%;
+  background-color: #fff;
+  animation: shiny-btn1 3s ease-in-out infinite;
 }
-.letter, .letter:before, .letter:after{
-  transition: all 0.3s ease-in-out;
+
+/* お問い合わせボタン */
+a.cp_btn {
+  font-size: 30px;
+  position: relative;
+  display: block;
+  left: 33.5%;
+	width: 30%;
+  padding: 1em;
+  border-radius: 50px;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	background: #f34b21;
+	border:solid 1px #fff;
+  overflow: hidden;
 }
-.letter:before{
-  color: #fff;
-  text-shadow: 
-    -1px 0px 1px rgba(255,255,255,.8),
-    1px 0px 1px rgba(0,0,0,.8);
-  z-index: 3;
-  transform:
-    rotateX(0deg)
-    rotateY(-15deg)
-    rotateZ(0deg);
+a.cp_btn:before {
+	content:"";
+	position: absolute;
+	top: -25px;
+	left: -20px;
+	height:150px;
+	width:20px;
+	background : #fff;
+	opacity: 0.3;
+	transform: rotate(40deg);
+	transition: 0.3s;
 }
-.letter:after{
-  color: rgba(0,0,0,.11);
-  z-index:2;
-  transform:
-    scale(1.08,1)
-    rotateX(0deg)
-    rotateY(0deg)
-    rotateZ(0deg)
-    skew(0deg,1deg);
-}
-.letter:hover:before{
-  color: #fafafa;
-  transform:
-    rotateX(0deg)
-    rotateY(-40deg)
-    rotateZ(0deg);
-}
-.letter:hover:after{
-  transform:
-    scale(1.08,1)
-    rotateX(0deg)
-    rotateY(40deg)
-    rotateZ(0deg)
-    skew(0deg,22deg);
+a.cp_btn:hover:before {
+	left:98%;
 }
