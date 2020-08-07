@@ -47,6 +47,7 @@ table td {
   table th,
 table td {
   width: 5%;
+  padding: 0.7em 0.2em;
 }
 }
 table thead th {
@@ -86,7 +87,10 @@ table tbody th {
   }
 }
 @media screen and (max-width: 600px) {
-  table{width: 100%;}
+  table{
+    width: 100%;
+    margin: 22px auto;
+  }
 }
 /* モーダルCSS */
 .modalArea {
@@ -442,16 +446,15 @@ table tbody th {
   background-color: burlywood;
   overflow: hidden;
   width: 100%;
-  height: 125px;
+  height: 200px;
   margin: auto;
 }
 @media screen and (max-width:480px){
   .footer {
     font-size: 0.75rem;
     width: 100%;
-    height: 205px;
+    height: 110px;
     padding: 0px;
-    padding-top: 20px;
   }
 }
 @media screen and (min-width:768px) and ( max-width:1024px){
@@ -462,9 +465,12 @@ table tbody th {
     padding: 30px;
   }
 }
-.footer dir{
-  display: none;
+@media screen and (max-width:480px){
+  .footer dir{
+    display: none;
+  }
 }
+
 .footer a{
   text-decoration: none;
   color: #fafafa;
@@ -488,7 +494,7 @@ table tbody th {
 }
 @media screen and (max-width:480px){
   .footer li{
-    width: 70px;
+    width: auto;
     text-align: center;
   }
 }
@@ -538,8 +544,9 @@ table tbody th {
     width: auto;
     padding: 0px;
     margin-bottom: 20px;
-  }
+    margin-top: 20px;
 }
+  }
 @media screen and (min-width:768px) and ( max-width:1024px){
   .footer-nav .logo {
     width: 150px;
@@ -571,7 +578,7 @@ h3 {
 }
 @media screen and (max-width:480px){
   h3{
-    font-size: 0.5em;
+    font-size: 0.9em;
   }
 }
 h4{
@@ -750,6 +757,11 @@ transform: translate(-50%, -50%);
 .colum2{
   width: 60%;
   text-align: center;
+}
+@media screen and (max-width:480px){
+  .colum2 h3{
+    font-size: 0.5em;
+  }
 }
 /* 3カラム */
 .colum3{
@@ -1036,6 +1048,14 @@ Part.3
 @media screen and (max-width:480px){
   .m20{
     margin: 10px 0px;
+  }
+}
+.p10_L{
+  padding-left: 15px;
+}
+@media screen and (min-width:768px) and ( max-width:1024px){
+  .p10_L{
+    padding-left: 0px;
   }
 }
 .p80{
@@ -1331,7 +1351,7 @@ Part.4
    z-index: 2;
  }
  .f_white{
-  color: rgb(221, 221, 221);
+  color: rgb(255 255 255);
 }
  .f_black{
    color: rgb(50, 50, 50);
